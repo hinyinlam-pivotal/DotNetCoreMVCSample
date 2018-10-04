@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    
+
+<div class="row">
+    <div class="col">
+        <h2>Wanna Throw Some Exception?</h2>
+        <p>Will run the following:</p>
+        <pre>
+            throw new SystemException("This is a generated system exception in ErrorController.ThrowException");
+        </pre>
+        <a href="/Error/ThrowException">Throw!</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h2>Wanna Kill this application instance?</h2>
+        <p>Will run the following:</p>
+        <pre>
+            Environment.Exit(-1);
+        </pre>
+        <a href="/Error/Kill">Kill!</a>
+    </div>
+</div>
