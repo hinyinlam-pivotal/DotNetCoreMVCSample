@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnetcore-pks
+  labels:
+    app: dotnetcore
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dotnetcore
+  template:
+    metadata:
+      labels:
+        app: dotnetcore
+    spec:
+      containers:
+      - name: dotnetcoresample
+        image: hinyinlam/dotnetcoresample
+        ports:
+        - containerPort: 80
